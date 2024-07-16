@@ -7,7 +7,7 @@ import styled from 'styled-components'
 
 function MediaOutlets() {
     return (
-    <EXPLORECONTAINER>
+    <MEDIACONTAINER>
     <div className='main'>
         <section>
             <h1>Our Divine Mission recognised by Prominent Media Outlets</h1>
@@ -28,14 +28,15 @@ function MediaOutlets() {
             </div>
         </section>
     </div>
-    </EXPLORECONTAINER>
+    </MEDIACONTAINER>
   )
 }
 
 export default MediaOutlets
 
 
-const EXPLORECONTAINER = styled.div`
+const MEDIACONTAINER = styled.div`
+
 section{
     background-color: #FAFAFA;
     display: flex;
@@ -43,6 +44,7 @@ section{
     justify-content: center;
     align-items: center;
     padding-top: 70px;
+    /* padding-bottom: 70px; */
 }
 section > h1{
     font-size: 35px;

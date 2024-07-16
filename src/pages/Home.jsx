@@ -2,6 +2,7 @@ import React from 'react'
 import HeroImage from '../components/HeroImage'
 import ExploreSriMandir from '../components/ExploreSriMandir'
 import MediaOutlets from '../components/MediaOutlets'
+import PujaSeva from '../components/PujaSeva'
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
       <HeroImage/>
       <ExploreSriMandir/>
       <MediaOutlets/>
+      <PujaSeva/>
     </div>
   )
 }
