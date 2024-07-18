@@ -147,6 +147,9 @@ section {
     color: #F18912;
     margin-bottom: 15px;
     margin-top: 15px;
+    &:hover{
+        text-decoration: underline;
+    }
 }
 
 .pujaseva_optiopns {
