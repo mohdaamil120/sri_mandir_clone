@@ -1,25 +1,60 @@
-import React from 'react'
-import EKADASHI1 from "../assets/ekadashi1.webp"
-import EKADASHI2 from "../assets/ekadashi2.webp"
-import EKADASHI3 from "../assets/ekadashi3.webp"
-import Venue from "../assets/puja_venue.svg"
-import Date from "../assets/puja_date.svg"
-
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import Data from '../utils/PujaData'
 
-function PujaSeva() {
+function PujaSeva({pujaData=Data,heading=true}) {
+
+    let dataToShow = heading ? pujaData.slice(0, 3) : pujaData;
+
     return (
-    <PUJASEVACONTAINER>
+    <PUJASEVACONTAINER heading={heading}>
     <div className='main'>
         <section>
-           <div className='heading_cont'>
+           {
+            heading ? (
+                <div className='heading_cont'>
                 <h1>Puja Seva for you and your loved ones</h1>
                 <p>Book Pujas in your and your family's name at 1000+ renowned temples in India.</p>
                 <p>You will also recive a video of the Puja and Prasad along with divine blessings.</p>
                 <button>View All Puja →</button>
            </div>
+            ):(
+                null
+            )
+           }
             <div className='pujaseva_optiopns'>
-                <div className='pujaseva_cont'>
+                {dataToShow?.map((item,i) =>{
+                    return (
+                        <div className='pujaseva_cont'>
+                    <div>
+                        <img src={item.image} alt="" />
+                    </div>
+                    <div>
+                        <p>{item.title}</p>
+                        <div></div>
+                    </div>
+                    <div>
+                        <p> {item.purpose}</p>
+                        <h3> {item.description} </h3>
+                    </div>
+                    <div className='puja_date_venue'>
+                        <div className='puja_details'>
+                            <img src={item.venueImage} alt="" />
+                            <p> {item.venue} </p>
+                        </div>
+                        <div className='puja_details'>
+                            <img src={item.dateImage} alt="" />
+                            <p>{item.date}</p>
+                        </div>
+                        <div>
+                            <button>PARTICIPATE  →</button>
+                        </div>
+                    </div>
+                </div>
+                    )
+                })}
+                
+                {/* <div className='pujaseva_cont'>
                     <div>
                         <img src={EKADASHI1} alt="" />
                     </div>
@@ -45,58 +80,7 @@ function PujaSeva() {
                         </div>
                     </div>
                 </div>
-                <div className='pujaseva_cont'>
-                    <div>
-                        <img src={EKADASHI2} alt="" />
-                    </div>
-                    <div>
-                        <p>DEVSHAYANI EKADASHI SPECIAL</p>
-                        <div></div>
-                    </div>
-                    <div>
-                        <h3>Pitru Dosha Nivaran Puja and Haridwar Ganga Abhishek Puja</h3>
-                        <p>For Peace of Ancestor's souls and Resolving Family Disputes </p>
-                    </div>
-                    <div className='puja_date_venue'>
-                        <div className='puja_details'>
-                            <img src={Venue} alt="" />
-                            <p>Pishach Mochan Kund and Ganga Ghat, Kashi, Haridwar</p>
-                        </div>
-                        <div className='puja_details'>
-                            <img src={Date} alt="" />
-                            <p>17 July, Wednesday, Ashadha Shukla Saptami</p>
-                        </div>
-                        <div>
-                            <button>PARTICIPATE  →</button>
-                        </div>
-                    </div>
-                </div>
-                <div className='pujaseva_cont'>
-                    <div>
-                        <img src={EKADASHI3} alt="" />
-                    </div>
-                    <div>
-                        <p>DEVSHAYANI EKADASHI SPECIAL</p>
-                        <div></div>
-                    </div>
-                    <div>
-                        <h3>Shri Baba Shyam Puja, Abhishek and Shringaar</h3>
-                        <p>For Abundance of Wealth and Protection from Negative Energies</p>
-                    </div>
-                    <div className='puja_date_venue'>
-                        <div className='puja_details'>
-                            <img src={Venue} alt="" />
-                            <p>Shri Khatu Shyam Temple, Haridwar, Uttarakhand</p>
-                        </div>
-                        <div className='puja_details'>
-                            <img src={Date} alt="" />
-                            <p>17 July, Wednesday, Ashadha Shukla Ekadashi</p>
-                        </div>
-                        <div>
-                            <button>PARTICIPATE  →</button>
-                        </div>
-                    </div>
-                </div>
+            */}
                
             </div>
         </section>
@@ -106,6 +90,10 @@ function PujaSeva() {
 }
 
 export default PujaSeva
+
+
+
+
 
 
 
@@ -153,22 +141,27 @@ section {
 }
 
 .pujaseva_optiopns {
-    display: flex;
+    /* display: flex; */
     margin: auto;
     max-width: 1280px;
     gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: ${props => props.heading ? 'white': "#F9F8FD"};
 }
 
 .pujaseva_cont {
-    width: 30%;
+    /* width: 33%; */
     border-radius: 7px;
     border: 1px solid lightgray;
     padding: 15px;
     cursor: pointer;
     display: flex;
+    margin: auto;
     flex-direction: column;
-    justify-content: space-between;
+    background-color: ${props => props.heading ?  "#F9F8FD" :'white'};
 }
+
 
 .pujaseva_cont > div:nth-child(1) > img {
     width: 100%;

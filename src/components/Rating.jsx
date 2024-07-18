@@ -6,7 +6,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import reviewData from "../utils/ReviewData"; 
 
-const Rating = () => {
+const Rating = ({heading,para}) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -29,8 +29,8 @@ const Rating = () => {
     <CAROUSELCONTAINER>
       <div className="main">
         <section>
-          <h2>Reviews & Ratings</h2>
-          <p>Read what our beloved devotees have to say about Sri Mandir.</p>
+          <h2>{heading? heading:"Reviews & Ratings"}</h2>
+          <p>{para ? para : "Read what our beloved devotees have to say about Sri Mandir."}</p>
           <Carousel 
             swipeable={true}
             draggable={true}
