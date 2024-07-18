@@ -7,6 +7,9 @@ import Panchang from '../components/Panchang'
 import Testimonial from '../components/Testimonial'
 import Rating from '../components/Rating'
 import Features from '../components/Features'
+import UpcommingFestivals from '../components/UpcommingFestivals'
+import FooterImage from '../components/FooterImage'
+import Footer from '../components/Footer'
 
 function Home() {
   return (
@@ -19,6 +22,9 @@ function Home() {
       <Testimonial/>
       <Rating/>
       <Features/>
+      <UpcommingFestivals/>
+      <FooterImage/>
+      <Footer/>
     </div>
   )
 }
