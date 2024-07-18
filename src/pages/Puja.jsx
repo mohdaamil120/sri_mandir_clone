@@ -62,6 +62,7 @@ const PUJACONTAINER = styled.div`
    border-radius: 5px;
    background-color: #F9FAFB;
    color: #1A6FE3;
+   font-weight: bold;
 }
 .filter_cont>button:nth-child(1)>img{
   position: relative;
@@ -83,40 +84,6 @@ const PUJACONTAINER = styled.div`
  }
 
 `
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

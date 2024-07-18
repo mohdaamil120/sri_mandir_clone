@@ -4,6 +4,7 @@ import Puja from "../pages/Puja";
 import PanchangPage from "../pages/PanchangPage";
 import Temples from "../pages/Temples";
 import PujaHistory from "../pages/PujaHistory";
+import PujaDetail from "../pages/PujaDetail";
 
 function AllRoutes() {
  
@@ -14,6 +15,7 @@ function AllRoutes() {
         <Route path="/panchang" element={<PanchangPage />} />
         <Route path="/temples" element={<Temples />} />
         <Route path="/puja/history" element={<PujaHistory />} />
+        <Route path="/puja/:id" element={<PujaDetail />} />
         {/* Add more route below */}
      </Routes>
   );
