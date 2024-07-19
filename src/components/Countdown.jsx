@@ -1,43 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
-const CountdownContainer = styled.div`
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
-  gap:20px;
-`;
 
-const CountdownItem = styled.div`
-span:nth-child(1){
-    font-size: 25px;
-}
-span:nth-child(2){
-    font-size: 14px;
-    margin-top: 10px;
-}
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  gap:5px;
-  padding: 4px 6px;
-background-color: #FEF5EC;
-color: #F49612;
-`;
-
-const Countdown = () => {
+const Countdown = ({ targetDate }) => {
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
-  const targetDate = new Date('2024-07-19T00:00:00.000Z'); // Set the target date and time
-
   useEffect(() => {
+    const target = new Date(targetDate);
+
+    if (isNaN(target)) {
+      console.error('Invalid date:', targetDate);
+      return;
+    }
+
     const intervalId = setInterval(() => {
       const now = new Date();
-      const distance = targetDate - now;
+      const distance = target - now;
 
       if (distance < 0) {
         clearInterval(intervalId);
@@ -55,7 +36,7 @@ const Countdown = () => {
     }, 1000);
 
     return () => clearInterval(intervalId);
-  }, []);
+  }, [targetDate]);
 
   return (
     <CountdownContainer>
@@ -80,3 +61,30 @@ const Countdown = () => {
 };
 
 export default Countdown;
+
+
+const CountdownContainer = styled.div`
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  gap: 20px;
+`;
+
+const CountdownItem = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  gap: 5px;
+  padding: 4px 6px;
+  background-color: #FEF5EC;
+  color: #F49612;
+
+  span:nth-child(1) {
+    font-size: 25px;
+  }
+  span:nth-child(2) {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+`;

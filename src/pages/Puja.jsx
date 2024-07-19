@@ -46,6 +46,8 @@ const PUJACONTAINER = styled.div`
 .filter{
   margin-top: 50px;
   margin-left: 25px;
+  max-width: 1280px;
+  margin: auto;
 }
 
 .filter_cont{
