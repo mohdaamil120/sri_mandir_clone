@@ -1,5 +1,32 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
+
+const VisitedPeople = () => {
+  return (
+    <Container>
+      <AvatarContainer>
+        <Avatar src="https://i.pravatar.cc/150?img=1" alt="Avatar 1" />
+        <Avatar src="https://i.pravatar.cc/150?img=2" alt="Avatar 2" />
+        <Avatar src="https://i.pravatar.cc/150?img=3" alt="Avatar 3" />
+        <Avatar src="https://i.pravatar.cc/150?img=4" alt="Avatar 4" />
+        <Avatar src="https://i.pravatar.cc/150?img=5" alt="Avatar 5" />
+        <Avatar src="https://i.pravatar.cc/150?img=6" alt="Avatar 6" />
+        <Avatar src="https://i.pravatar.cc/150?img=7" alt="Avatar 7" />
+      </AvatarContainer>
+      <Text>
+        Till now <span>2,00,000+ Devotees</span> have participated in Pujas
+        conducted by Sri Mandir Puja Seva.
+      </Text>
+      <Link to="packages" smooth={true} duration={500}>
+        <Button>Select puja package →</Button>
+      </Link>
+    </Container>
+  );
+};
+
+export default VisitedPeople;
+
 
 const Container = styled.div`
   display: flex;
@@ -45,25 +72,19 @@ width: 500px;
   font-weight: bold;
 `;
 
-const VisitedPeople = () => {
-  return (
-    <Container>
-      <AvatarContainer>
-        <Avatar src="https://i.pravatar.cc/150?img=1" alt="Avatar 1" />
-        <Avatar src="https://i.pravatar.cc/150?img=2" alt="Avatar 2" />
-        <Avatar src="https://i.pravatar.cc/150?img=3" alt="Avatar 3" />
-        <Avatar src="https://i.pravatar.cc/150?img=4" alt="Avatar 4" />
-        <Avatar src="https://i.pravatar.cc/150?img=5" alt="Avatar 5" />
-        <Avatar src="https://i.pravatar.cc/150?img=6" alt="Avatar 6" />
-        <Avatar src="https://i.pravatar.cc/150?img=7" alt="Avatar 7" />
-      </AvatarContainer>
-      <Text>
-        Till now <span>2,00,000+ Devotees</span> have participated in Pujas
-        conducted by Sri Mandir Puja Seva.
-      </Text>
-      <Button>Select puja package →</Button>
-    </Container>
-  );
-};
 
-export default VisitedPeople;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

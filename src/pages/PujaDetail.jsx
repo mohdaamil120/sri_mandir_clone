@@ -1,5 +1,6 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import {  useParams } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import styled from 'styled-components';
 import Data from '../utils/PujaData';
 import Countdown from '../components/Countdown';
@@ -8,6 +9,10 @@ import Footer from "../components/Footer"
 import Rating from "../components/Rating"
 import FAQs from '../components/Faq';
 import Packages from '../components/Packages';
+import AboutPuja from '../components/AboutPuja';
+import PujaBenefits from '../components/PujaBenefits';
+import PujaProces from '../components/PujaProcess';
+import TempleDetails from '../components/TempleDetails';
 
 // Function to parse date string to a valid Date object
 const parsePujaDate = (dateStr) => {
@@ -50,19 +55,50 @@ const PujaDetail = () => {
           <div className='navigate_more_details'>
                 <hr />
                 <div>
-                    <p>About Puja</p>
-                    <p>Benefits</p>
-                    <p>Process</p>
-                    <p>Temple Details</p>
-                    <p>Packages</p>
-                    <p>Reviews</p>
-                    <p>FAQs</p>
+                    <Link to='about' smooth={true} duration={500}><p>About Puja</p></Link>
+                    <Link to='benefit' smooth={true} duration={500}><p>Benefits</p></Link>
+                    <Link to='process' smooth={true} duration={500}><p>Process</p></Link>
+                    <Link to='temple_detail' smooth={true} duration={500}><p>Temple Details</p></Link>
+                    <Link to="packages" smooth={true} duration={500}><p>Packages</p></Link>
+                    <Link to="review" smooth={true} duration={500}><p>Reviews</p></Link>
+                    <Link to="faq" smooth={true} duration={500}><p>FAQs</p></Link>
+                   
+                  
                   </div>    
                 <hr />
           </div>
-          <Packages/>
-          <Rating heading={"What devotees Say about Sri Mandir Puja ?"} para={"Reviews and Ratings from our customers who performed online Puja with us."}/>
+          <div id="about">
+          <AboutPuja/>
+          </div>
+          <div className='hrline'></div>
+          
+          <div id="benefit">
+          <PujaBenefits/>
+          </div>
+          <div className='hrline'></div>
+          
+          <div id="process">
+          <PujaProces/>
+          </div>
+          <div className='hrline'></div>
+          
+          <div id="temple_detail">
+          <TempleDetails/>
+          </div>
+          <div className='hrline'></div>
+          
+          <div id="packages">
+          <Packages />
+          </div>
+         
+          <div id="review">
+          <Rating  heading={"What devotees Say about Sri Mandir Puja ?"} para={"Reviews and Ratings from our customers who performed online Puja with us."}/>
+          </div>
+          
+          <div id="faq">
           <FAQs />
+          </div>
+
           <Footer/>
       </div>  
     </PujaDetailContainer>
@@ -142,17 +178,13 @@ const PujaDetailContainer = styled.div`
     background-color: #FFFFFF;
     z-index: 999;
   }
+
+  .hrline{
+    height: 10px;
+    max-width: 1280px;
+    margin: auto;
+    background-color: #F9F8FD;
+  }
 `;
-
-
-
-
-
-
-
-
-
-
-
 
 
