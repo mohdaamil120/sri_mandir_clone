@@ -169,7 +169,15 @@ const PujaDetailContainer = styled.div`
   .navigate_more_details > div>p {
     font-weight: bold;
     color: gray;
+    
   }
+
+  .navigate_more_details > div p{
+    cursor: pointer;
+    &:hover {
+      color: orange;
+    }
+  } 
 
   .navigate_more_details {
     margin-top: 20px;
