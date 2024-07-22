@@ -25,7 +25,8 @@ const PujaDetail = () => {
   let { id } = useParams(); 
   id = +id;
 
-  const puja = Data.find(item => item.id === id);
+  const puja = Data.find(item => item.id === id); // finding selected puja details from all 
+  // console.log("single puja cared selected",puja)
 
   if (!puja) {
     return <div>Puja not found</div>;
@@ -88,7 +89,7 @@ const PujaDetail = () => {
           <div className='hrline'></div>
           
           <div id="packages">
-          <Packages />
+          <Packages puja={puja}/>
           </div>
          
           <div id="review">

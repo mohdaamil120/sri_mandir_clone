@@ -136,13 +136,15 @@ import pujaPackages from '../utils/PujaPackages';
 import styled from 'styled-components';
 import Modal from '../components/Modal';
 
-function Packages() {
+function Packages({puja}) {
   const [packages] = useState(pujaPackages);
   const [showModal, setShowModal] = useState(false);
   const [selectedPrice, setSelectedPrice] = useState('');
+  const [selectedPackage, setSelectedPackage] = useState('');
 
-  const handleParticipateClick = (price) => {
-    setSelectedPrice(price);
+  const handleParticipateClick = (item) => {
+    setSelectedPrice(item.price);
+    setSelectedPackage(item)
     setShowModal(true);
   };
 
@@ -179,13 +181,13 @@ function Packages() {
                   </ul>
                 </div>
                 <hr />
-                <button onClick={() => handleParticipateClick(item.price)}>PARTICIPATE →</button>
+                <button onClick={() => handleParticipateClick(item)}>PARTICIPATE →</button>
               </div>
             ))}
           </div>
         </div>
       </div>
-      <Modal show={showModal} onClose={handleCloseModal} price={selectedPrice} onSubmit={handleSubmit} />
+      <Modal selectedPackage={selectedPackage} puja={puja} show={showModal} onClose={handleCloseModal} price={selectedPrice} onSubmit={handleSubmit} />
     </PACKAGECONTAINER>
   );
 }

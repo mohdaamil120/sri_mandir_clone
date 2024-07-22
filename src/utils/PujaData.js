@@ -12,7 +12,7 @@ const pujaData = [
       description: "16,000 Brihaspati Graha Mool Mantra jaap & Sudarshan Havan",
       purpose: "To find an Ideal Partner and Relationship Bliss",
       venue: "Shri Navagrah Shani Temple, Ujjain, Madhya Pradesh",
-      date: "17 July, Wednesday, Ashadha Shukla Saptami",
+      date: "30 July, Wednesday, Ashadha Shukla Saptami",
       image: EKADASHI1,
       venueImage: Venue, 
       dateImage: Date 
@@ -23,7 +23,7 @@ const pujaData = [
       description: "Pitru Dosha Nivaran Puja and Haridwar Ganga Abhishek Puja",
       purpose: "For Peace of Ancestor's souls and Resolving Family Disputes",
       venue: "Pishach Mochan Kund and Ganga Ghat, Kashi, Haridwar",
-      date: "17 July, Wednesday, Ashadha Shukla Saptami",
+      date: "29 July, Wednesday, Ashadha Shukla Saptami",
       image: EKADASHI2,
       venueImage: Venue, 
       dateImage: Date 
@@ -34,7 +34,7 @@ const pujaData = [
       description: "Shri Baba Shyam Puja, Abhishek and Shringaar",
       purpose: "For Abundance of Wealth and Protection from Negative Energies",
       venue: "Shri Khatu Shyam Temple, Haridwar, Uttarakhand",
-      date: "17 July, Wednesday, Ashadha Shukla Ekadashi",
+      date: "28 July, Wednesday, Ashadha Shukla Ekadashi",
       image: EKADASHI3,
       venueImage: Venue, 
       dateImage: Date 
@@ -45,7 +45,7 @@ const pujaData = [
       description: "Mahakali Tantra Yukta Yagya and 1008 Laal Pushp Mahakali Yantra Abhishek",
       purpose: "For Courage and Strength to Conquer Fear",
       venue: "Kalimath Temple, Rudraprayag, Uttarakhand",
-      date: "19 July, Friday, Ashadha Shukla Trayodashi",
+      date: "29 July, Friday, Ashadha Shukla Trayodashi",
       image: EKADASHI1,
       venueImage: Venue, 
       dateImage: Date
@@ -56,7 +56,7 @@ const pujaData = [
       description: "Shani Saade Saati Peeda Shanti Mahapuja and Til Tel Abhishek",
       purpose: "For Prevention of Misfortunes and Adversities",
       venue: "Shree Shanidev Temple, Shani Shingnapur, Maharashtra",
-      date: "20 July, Saturday, Ashadha Shukla Chaturdashi",
+      date: "30 July, Saturday, Ashadha Shukla Chaturdashi",
       image: EKADASHI1,
       venueImage: Venue, 
       dateImage: Date
@@ -67,7 +67,7 @@ const pujaData = [
       description: "Maa Bagalamukhi Tantra Yukta Havan",
       purpose: "For Victory in Court Cases and Victory over Enemies",
       venue: "Maa Bagalamukhi Temple, Haridwar, Uttarakhand",
-      date: "21 July, Sunday, Ashadha Shukla Chaturdashi",
+      date: "30 July, Sunday, Ashadha Shukla Chaturdashi",
       image: EKADASHI1,
       venueImage: Venue, 
       dateImage: Date
@@ -78,7 +78,7 @@ const pujaData = [
       description: "Divya Mahakali Tantrokta Havan",
       purpose: "For Courage and Protection from Obstacles",
       venue: "Shaktipeeth Maa Tarapith Temple, Birbhum, West Bengal",
-      date: "20 July, Saturday, Ashadha Shukla Purnima (From 05:59 PM, July 20 to 03:46 PM, July 21)",
+      date: "20 August, Saturday, Ashadha Shukla Purnima (From 05:59 PM, July 20 to 03:46 PM, July 21)",
       image: EKADASHI1,
       venueImage: Venue, 
       dateImage: Date
@@ -89,7 +89,7 @@ const pujaData = [
       description: "1008 Dakshinamurthy Mool Mantra Jaap and Havan and Omkareshwar Rudrabhishek",
       purpose: "To Find Purpose and Achieve Stability in Life",
       venue: "Shri Omkareshwar Jyotirlinga Temple , Khandwa, Madhya Pradesh",
-      date: "21 July, Sunday, Ashadha Shukla Purnima",
+      date: "1 August, Sunday, Ashadha Shukla Purnima",
       image: EKADASHI1,
       venueImage: Venue, 
       dateImage: Date
@@ -100,7 +100,7 @@ const pujaData = [
       description: "Rahu-Guru Shanti Special Guru Chandal Dosha Nivaran Mahapuja",
       purpose: "For Prosperity and Material Well-Being",
       venue: "Shri Brihaspati Temple, Kashi, Uttar Pradesh",
-      date: "21 July, Sunday, Ashadha Shukla Purnima",
+      date: "30 July, Sunday, Ashadha Shukla Purnima",
       image: EKADASHI1,
       venueImage: Venue, 
       dateImage: Date
@@ -111,7 +111,7 @@ const pujaData = [
       description: "Satyanarayan Katha and Navagraha Shanti Puja",
       purpose: "For Enhancing Material Prosperity and Promoting Emotional Well-Being",
       venue: "Shri Omkareshwar Jyotirlinga Temple, Khandwa, Madhya Pradesh",
-      date: "21 July, Sunday, Ashadha Shukla Purnima",
+      date: "2 August, Sunday, Ashadha Shukla Purnima",
       image: EKADASHI1,
       venueImage: Venue, 
       dateImage: Date
@@ -122,7 +122,7 @@ const pujaData = [
       description: "Pitru Dosh Shanti Mahapuja and Ganga Aarti",
       purpose: "For Peace of Ancestor's souls and Resolving Family Disputes",
       venue: "Pishach Mochan Kund, Kashi, Uttar Pradesh",
-      date: "21 July, Sunday, Ashadha Shukla Purnima",
+      date: "30 July, Sunday, Ashadha Shukla Purnima",
       image: EKADASHI1,
       venueImage: Venue, 
       dateImage: Date
@@ -133,7 +133,7 @@ const pujaData = [
       description: "Lakshmi Hridya Path, Sri Yantra Puja and Sri Suktam Havan",
       purpose: "For Material Prosperity and Protection from Financial Misfortune",
       venue: "Shaktipeeth Maa Mahalaxmi Ambabai Temple , Kolhapur, Maharashtra",
-      date: "21 July, Sunday, Ashadha Shukla Purnima",
+      date: "20 August, Sunday, Ashadha Shukla Purnima",
       image: EKADASHI1,
       venueImage: Venue, 
       dateImage: Date
@@ -254,7 +254,7 @@ const pujaData = [
       description: "11,000 Mahamrityunjay Jaap Maha Anushthan and Panchamrit ",
       purpose: "For Promoting Positive Energy and Receiving Blessings of Good Health",
       venue: "Shri Mahamrityunjay Mahadev Temple, Kashi, Uttar Pradesh",
-      date: "22 July, Monday, Shravana Krishna Pratipada",
+      date: "30 July, Monday, Shravana Krishna Pratipada",
       image: EKADASHI1,
       venueImage: Venue, 
       dateImage: Date
