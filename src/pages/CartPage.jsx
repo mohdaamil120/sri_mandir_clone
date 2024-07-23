@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { FaCheckCircle, FaRegCircle, FaArrowRight, FaMoneyBillWave, FaCalendarAlt, FaUser } from 'react-icons/fa';
 import Back_Arrow from "../assets/back_arrow.svg"
@@ -13,42 +13,53 @@ const CartPage = () => {
   const [expandedCard, setExpandedCard] = useState(false)
   const { packageId, userId } = useParams();
   const location = useLocation();
+  const navigate = useNavigate();
   const { price, name, whatsappNumber, puja,selectedPackage } = location.state || {}; // Destructure state
 
   const toggleReadMore= ()=>{
     setExpandedCard(prev => !prev);
   }
 
+  const handleContinue = () => {
+    navigate('/puja/sankalp', {
+      state: {
+        whatsappNumber,
+        puja,
+        selectedPackage
+      }
+    });
+  };
+
   return (
     <DIV>
         <Header>
-        <Step active={true}>
-        <StepIcon active={true}>
-            <FaCheckCircle />
-        </StepIcon>
-        <StepLabel active={true}>Add Details</StepLabel>
-        </Step>
-         <p>»</p>
-        <Step active={true}>
-        <StepIcon active={true}>
-            <FaCheckCircle />
-        </StepIcon>
-        <StepLabel active={true}>Review Booking</StepLabel>
-        </Step>
-        <p>»</p>
-        <Step>
-        <StepIcon>
-            <FaRegCircle />
-        </StepIcon>
-        <StepLabel>Fill Name, Gotra & Address</StepLabel>
-        </Step>
-        <p>»</p>
-        <Step>
-        <StepIcon>
-            <FaRegCircle />
-        </StepIcon>
-        <StepLabel>Make Payment</StepLabel>
-        </Step>
+          <Step active={true}>
+            <StepIcon active={true}>
+                <FaCheckCircle />
+            </StepIcon>
+            <StepLabel active={true}>Add Details</StepLabel>
+          </Step>
+          <p>»</p>
+          <Step active={false}>
+            <StepIcon active={false}>
+                <FaCheckCircle />
+            </StepIcon>
+            <StepLabel active={false}>Review Booking</StepLabel>
+          </Step>
+          <p>»</p>
+          <Step>
+            <StepIcon>
+                <FaRegCircle />
+            </StepIcon>
+            <StepLabel>Fill Name, Gotra & Address</StepLabel>
+          </Step>
+          <p>»</p>
+          <Step>
+            <StepIcon>
+                <FaRegCircle />
+            </StepIcon>
+            <StepLabel>Make Payment</StepLabel>
+          </Step>
         </Header>
         <h3><img src={Back_Arrow} alt="" /> Review Booking</h3>
         <div className='line'></div>
@@ -107,12 +118,12 @@ const CartPage = () => {
                     <BillValue>{selectedPackage.price}</BillValue>
                     </BillItem>
                     <hr  />
-                    <ButtonContainer>
+                    <ButtonContainer onClick={handleContinue}>
                         <div>
                             <p>{selectedPackage.price}</p>
                             <p>{selectedPackage.name}</p>
                         </div>
-                        <div><Button>Continue <FaLongArrowAltRight className="icon" /></Button></div>
+                        <div><Button >Continue <FaLongArrowAltRight className="icon" /></Button></div>
                     </ButtonContainer>
                 </BillDetails>
             </div>
@@ -267,17 +278,20 @@ const BookingItem = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-
+ 
   button{
     border: none;
     background: transparent;
     font-size: 20px;
     color: #1580E3;
+     margin-left: 10px;
   }
   .coupon{
     color: #1580E3;
   }
 `;
+
+
 
 const BookingLabel = styled.span`
   font-weight: bold;

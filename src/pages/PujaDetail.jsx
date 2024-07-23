@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {  useParams } from 'react-router-dom';
 import { Link } from 'react-scroll';
 import styled from 'styled-components';
@@ -24,6 +24,10 @@ const parsePujaDate = (dateStr) => {
 const PujaDetail = () => {
   let { id } = useParams(); 
   id = +id;
+ 
+  useEffect(() => {     // for scroll top as soon as component will mount
+    window.scrollTo(0, 0);
+  }, []);  
 
   const puja = Data.find(item => item.id === id); // finding selected puja details from all 
   // console.log("single puja cared selected",puja)
